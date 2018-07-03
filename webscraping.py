@@ -11,10 +11,10 @@ print "Time Started :", datetime.datetime.time(datetime.datetime.now())
 
 
 x = 0
-# filename="datasets.csv" #saving data as csv
-# f=open(filename,"w")
-# headers="Name,Friend Count,Photo Count,Review Count,Elite Member,Funny Count,Cool Count,Useful Count,Review Stars,Review Length,Reviews\n" #these are the features that are scraped 
-# f.write(headers)
+filename="datasets.csv" #saving data as csv
+f=open(filename,"w")
+headers="Name,Friend Count,Photo Count,Review Count,Elite Member,Funny Count,Cool Count,Useful Count,Review Stars,Review Length,Reviews\n" #these are the features that are scraped 
+f.write(headers)
 
 for _ in range(5):
     print _
@@ -84,10 +84,10 @@ for _ in range(5):
         print review_counter[0]
         review=str(review_counter[0])
 
-        # f.write(str(user_count) + "," + str(friend_count) + "," + str(photo_count) + "," + str(review_count)+","+str(elite_count)+","+str(funny_count)+","+str(cool_count)+","+str(useful_count)+","+str(rating_count)+","+str(length_count)+","+str(review)+"\n")
+        f.write(str(user_count) + "," + str(friend_count) + "," + str(photo_count) + "," + str(review_count)+","+str(elite_count)+","+str(funny_count)+","+str(cool_count)+","+str(useful_count)+","+str(rating_count)+","+str(length_count)+","+str(review)+"\n")
 
-#     x=x+20
-# f.close()
+    x=x+20
+f.close()
 
 
 # Show the total time taken for the program
